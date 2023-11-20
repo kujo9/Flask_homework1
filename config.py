@@ -1,7 +1,7 @@
 #this is our configuration file to configure flask to our app location & variables needed to run Flask
 
 
-import os 
+import os #operating system 
 from dotenv import load_dotenv #allows us to load our environment variables (variables needed to run application)
 
 
@@ -28,3 +28,5 @@ class Config():
     FLASK_ENV = os.environ.get('FLASK_ENV') 
     FLASK_DEBUG = os.environ.get('FLASK_DEBUG')
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'Literally whatever you want as long as its a string. Cool Beans'
+		SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db') 
+  
