@@ -1,2 +1,5 @@
-homework_env
+rangers_env
 .env
+migrations
+__pycache__
+image_cache.sqlite
