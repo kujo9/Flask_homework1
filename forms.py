@@ -16,5 +16,14 @@ class RegisterForm(FlaskForm):
     email = StringField('Email', validators= [ DataRequired(), Email()])
     password = PasswordField('Password', validators = [ DataRequired()])
     confirm_password = PasswordField('Confirm Password', validators=[ DataRequired(), EqualTo('password')])
-    submit = SubmitField('Sign Up') 
+    submit = SubmitField('Sign Up')
     
+
+# ADD THIS
+class ProductForm(FlaskForm):
+    name = StringField('Product Name', validators=[ DataRequired() ] )
+    image = StringField('Img url **Optional')
+    description = StringField('Description **Optional')
+    price = DecimalField('Price', validators=[ DataRequired() ])
+    quantity = IntegerField('Quantity', validators=[ DataRequired() ])
+    submit = SubmitField('Submit')
